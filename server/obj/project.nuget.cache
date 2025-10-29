@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "iR8GuZP1xmk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Vidal\\Code\\vehicleRoutine\\server\\server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vidal\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.0\\microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
+    "C:\\Users\\Vidal\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
