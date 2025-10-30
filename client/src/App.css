@@ -4,3 +4,60 @@
   margin: 0 auto;
   text-align: center;
 }
+
+.page-container {
+  place-items: center;
+  padding: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  gap: 10px;
+}
+
+.form input {
+  padding: 8px;
+}
+
+button {
+  padding: 10px;
+  color: white;
+  background-color: #1e1e1e;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.car-list * {
+  text-decoration: none;
+  color: white;
+}
+
+.car-visualization {
+  place-items: center;
+}
+
+.placeholder-3d {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  background-color: #e0e0e0;
+}
+
+.maintenance-section ul li {
+  list-style: none;
+}
