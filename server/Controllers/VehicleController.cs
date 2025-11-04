@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using server.Database;
 using server.Models;
 
 namespace server.Controllers;
@@ -7,16 +8,20 @@ namespace server.Controllers;
 [Route("/api")]
 public class VehicleController : ControllerBase
 {
+    // Database context
+    private readonly ServerDbContext _db;
+
+    // Constructor
+    public VehicleController(ServerDbContext db)
+    {
+        _db = db;
+    }
+    
+    // Get testing data
     [HttpGet("vehicle")]
     public IActionResult GetVehicle()
     {
-        var car = new Vehicle
-        {
-            Make = "Toyota",
-            Model = "Camry",
-            Year = 2012
-        };
-        
-        return Ok(car);
+        var vehicles = _db.Vehicles.ToList();
+        return Ok(vehicles);
     }
 }

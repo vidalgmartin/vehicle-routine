@@ -3,21 +3,29 @@ import { useState } from "react"
 import "./Navbar.css"
 
 export default function Navbar() {
-    const [ apiTest, setApiTest ] = useState("")
+    const [ vehicles, setVehicles ] = useState([])
 
     // API Test
     const getVehicle = async () => {
-        const res = await fetch('https://localhost:7261/api/vehicle')
-        const vehicle = await res.json()
+        try {
+            const res = await fetch('https://localhost:7261/api/vehicle')
+            const data = await res.json()
 
-        setApiTest(vehicle)
+            setVehicles(data)
+        } catch (err) {
+            console.error(err)
+        }
     }
 
     return (
         <nav className="navbar">
             <div className="nav-logo">Garage</div>
 
-            <button onClick={() => getVehicle()}>call API: {apiTest.make}</button>
+            <button onClick={() => getVehicle()}>call API</button>
+
+            {vehicles.map(vehicle => (
+                <p key={vehicle.id}>{vehicle.make}</p>
+            ))}
             
             <ul className="nav-links">
                 <li><Link to="/garage">My Garage</Link></li>
