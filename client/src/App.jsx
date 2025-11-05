@@ -5,8 +5,8 @@ import "./App.css"
 import Navbar from "./components/Navbar"
 
 // Pages
-import AddCar from "./pages/AddCar"
-import CarDetails from "./pages/CarDetails"
+import AddVehicle from "./pages/AddVehicle"
+import VehicleDetails from "./pages/VehicleDetails"
 import Garage from "./pages/Garage"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
@@ -21,8 +21,8 @@ export default function App() {
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/garage" element={<Garage />} />
-          <Route path="/add-car" element={<AddCar />} />
-          <Route path="/car/:id" element={<CarDetails />} />
+          <Route path="/add-vehicle" element={<AddVehicle />} />
+          <Route path="/vehicle/:id" element={<VehicleDetails />} />
         </Routes>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
-import CarCard from "../components/VehicleCard"
+import VehicleCard from "../components/VehicleCard"
 
 export default function Garage() {
     const [ vehicles, setVehicles ] = useState([])
@@ -21,14 +21,14 @@ export default function Garage() {
         getVehicles()
     }, [])
 
-    return(
+    return (
         <div className="page-container">
             <h2>My Garage</h2>
 
-            <div className="car-list">
+            <div className="vehicle-list">
                 {vehicles.map((vehicle) => (
-                    <Link key={vehicle.id} to={`/car/${vehicle.id}`}>
-                        <CarCard vehicle={vehicle}/>
+                    <Link key={vehicle.id} to={`/vehicle/${vehicle.id}`}>
+                        <VehicleCard vehicle={vehicle}/>
                     </Link>
                 ))}
             </div>

@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom"
 
-export default function CarDetails() {
+export default function VehicleDetails() {
     const { id } = useParams()
 
     return(
         <div className="page-container">
-            <h2>Car Details (ID: {id})</h2>
+            <h2>Vehicle Details (ID: {id})</h2>
 
-            <div className="car-visualization">
-                <div className="placeholder-3d">3D Car Model Placeholder</div>
+            <div className="vehicle-visualization">
+                <div className="placeholder-3d">3D vehicle Model Placeholder</div>
             </div>
 
             <div className="maintenance-section">

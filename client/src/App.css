@@ -33,17 +33,17 @@ button:hover {
   background-color: #333;
 }
 
-.car-list {
+.vehicle-list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.car-list * {
+.vehicle-list * {
   text-decoration: none;
   color: white;
 }
 
-.car-visualization {
+.vehicle-visualization {
   place-items: center;
 }
 
