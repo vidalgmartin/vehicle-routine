@@ -10,7 +10,7 @@ export default function Navbar() {
             <ul className="nav-links">
                 <li><Link to="/garage">My Garage</Link></li>
                 <li><Link to="/add-vehicle">Add Vehicle</Link></li>
-                <li><Link to="/">Login</Link></li>
+                <li><Link to="/login">Login</Link></li>
             </ul>
         </nav>
     )

@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar"
 import AddVehicle from "./pages/AddVehicle"
 import VehicleDetails from "./pages/VehicleDetails"
 import Garage from "./pages/Garage"
+import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 
@@ -18,7 +19,8 @@ export default function App() {
 
       <div className="content">
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/garage" element={<Garage />} />
           <Route path="/add-vehicle" element={<AddVehicle />} />

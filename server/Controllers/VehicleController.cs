@@ -17,7 +17,7 @@ public class VehicleController : ControllerBase
         _db = db;
     }
     
-    // Get testing data
+    // Get vehicles
     [HttpGet("vehicle")]
     public IActionResult GetVehicle()
     {
