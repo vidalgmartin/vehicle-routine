@@ -1,17 +1,31 @@
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import "./Navbar.css"
 
 export default function Navbar() {
+    const [ dropDown, setDropDown ] = useState(false)
 
+    const openDropDown = () => {
+        setDropDown(!dropDown)
+    }
+    
     return (
         <nav className="navbar">
-            <div className="nav-logo">Garage</div>
+            <div className="navbar-items">
+                <Link to="/" id="logo"><h2>Garage</h2></Link>
+                
+                <div className="menu-wrapper">
+                    <span id="menu-icon" onClick={() => openDropDown()}>Icon</span>
 
-            <ul className="nav-links">
-                <li><Link to="/garage">My Garage</Link></li>
-                <li><Link to="/add-vehicle">Add Vehicle</Link></li>
-                <li><Link to="/login">Login</Link></li>
-            </ul>
+                    {dropDown && (
+                        <div className="dropdown-menu">
+                            <Link to="/login">Login</Link>
+
+                            <Link to="/garage">My Garage</Link>
+                        </div>
+                    )}
+                </div>
+            </div>
         </nav>
     )
 }
