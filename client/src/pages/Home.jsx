@@ -19,7 +19,7 @@ function Donut() {
 
 export default function Home() {
     return (
-        <div className="home-container">
+        <div className="page-container">
 
             <div className="home-content-container">
                 <div className="home-content" id="donut-container">
@@ -36,7 +36,7 @@ export default function Home() {
                     </div>
                             
                     <div className="home-btns">
-                        <Link to="/signup">
+                        <Link to="/register">
                             <button>
                                 Sign Up
                             </button>

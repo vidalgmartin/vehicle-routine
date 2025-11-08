@@ -24,6 +24,7 @@ export default function Garage() {
     return (
         <div className="page-container">
             <h2>My Garage</h2>
+            <Link to="/add-vehicle">Add Vehicle</Link>
 
             <div className="vehicle-list">
                 {vehicles.map((vehicle) => (

@@ -15,7 +15,7 @@ export default function Navbar() {
                 <Link to="/" id="logo"><h2>Garage</h2></Link>
                 
                 <div className="menu-wrapper">
-                    <span id="menu-icon" onClick={() => openDropDown()}>Icon</span>
+                    <span id="menu-icon" onClick={() => openDropDown()}>Menu</span>
 
                     {dropDown && (
                         <div className="dropdown-menu">
