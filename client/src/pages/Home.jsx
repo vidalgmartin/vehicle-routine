@@ -21,7 +21,7 @@ export default function Home() {
     return (
         <div className="page-container">
 
-            <div className="home-content-container">
+            <div className="home-container">
                 <div className="home-content" id="donut-container">
                     <Canvas camera={{ position: [-0.4, 1, 6] }}>
                         <ambientLight />
