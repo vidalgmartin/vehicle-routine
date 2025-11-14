@@ -11,6 +11,7 @@ import Garage from "./pages/Garage"
 import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
+import TestingPage from "./pages/TestingPage"
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/garage" element={<Garage />} />
           <Route path="/add-vehicle" element={<AddVehicle />} />
           <Route path="/vehicle/:id" element={<VehicleDetails />} />
+          <Route path="/testing-page" element={<TestingPage />} />
         </Routes>
       </div>
     </div>
