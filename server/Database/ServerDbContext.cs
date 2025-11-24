@@ -8,4 +8,5 @@ public class ServerDbContext : DbContext
     public ServerDbContext(DbContextOptions<ServerDbContext> options) : base(options) {}
 
     public DbSet<Vehicle> Vehicles { get; set; }
+    public DbSet<User> Users { get; set; }
 }
