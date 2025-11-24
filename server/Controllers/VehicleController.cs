@@ -5,7 +5,7 @@ using server.Models;
 namespace server.Controllers;
 
 [ApiController]
-[Route("/api")]
+[Route("api/[controller]")]
 public class VehicleController : ControllerBase
 {
     // Database context
@@ -18,8 +18,8 @@ public class VehicleController : ControllerBase
     }
     
     // Get vehicles
-    [HttpGet("vehicle")]
-    public IActionResult GetVehicle()
+    [HttpGet("all")]
+    public IActionResult GetVehicles()
     {
         var vehicles = _db.Vehicles.ToList();
         return Ok(vehicles);

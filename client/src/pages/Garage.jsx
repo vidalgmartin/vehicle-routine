@@ -9,7 +9,7 @@ export default function Garage() {
     useEffect(() => {
         const getVehicles = async () => {
             try {
-                const res = await fetch('https://localhost:7261/api/vehicle')
+                const res = await fetch('https://localhost:7261/api/vehicle/all')
                 const data = await res.json()
 
                 setVehicles(data)
