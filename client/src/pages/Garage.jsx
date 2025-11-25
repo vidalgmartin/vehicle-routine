@@ -4,6 +4,7 @@ import VehicleCard from "../components/VehicleCard"
 
 export default function Garage() {
     const [ vehicles, setVehicles ] = useState([])
+    const [ users, setUsers ] = useState([])
 
     // API Test
     useEffect(() => {
@@ -17,8 +18,20 @@ export default function Garage() {
                 console.error(err)
             }
         }
+
+        const getUsers = async () => {
+            try {
+                const res = await fetch('https://localhost:7261/api/user/all')
+                const data = await res.json()
+
+                setUsers(data)
+            } catch (err) {
+                console.error(err)
+            }
+        }
         
         getVehicles()
+        getUsers()
     }, [])
 
     return (
@@ -30,6 +43,14 @@ export default function Garage() {
                 {vehicles.map((vehicle) => (
                     <Link key={vehicle.id} to={`/vehicle/${vehicle.id}`}>
                         <VehicleCard vehicle={vehicle}/>
+                    </Link>
+                ))}
+            </div>
+
+            <div className="vehicle-list">
+                {users.map((user) => (
+                    <Link key={user.id} to={`/vehicle/${user.id}`}>
+                        <VehicleCard vehicle={user}/>
                     </Link>
                 ))}
             </div>
